@@ -1,0 +1,87 @@
+@use '~@skyscanner/bpk-foundations-web/tokens/base.scss' as base;
+
+@mixin container {
+  max-width: base.$bpk-breakpoint-desktop;
+  margin: 0 auto;
+}
+
+@mixin bpk-box-shadow-sm {
+  box-shadow: base.$bpk-box-shadow-sm;
+}
+
+@mixin bpk-breakpoint-mobile-header {
+  padding: base.bpk-spacing-xl();
+}
+
+@mixin bpk-breakpoint-mobile-main {
+  padding: base.bpk-spacing-base();
+}
+
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+
+  &__header {
+    padding: base.bpk-spacing-lg() * 2;
+    background-color: base.$bpk-color-sky-blue;
+    background-image: base.$bpk-primary-gradient;
+    color: base.$bpk-color-white;
+    @include bpk-box-shadow-sm;
+    @include bpk-breakpoint-mobile-header();
+  }
+
+  &__header-inner {
+    @include container;
+  }
+
+  &__main {
+    padding: base.bpk-spacing-xxl();
+    @include container;
+    @include bpk-breakpoint-mobile-main();
+  }
+
+  &__heading {
+    margin-bottom: base.bpk-spacing-sm();
+    font-weight: bold;
+  }
+
+  &__text {
+    margin-bottom: base.bpk-spacing-sm();
+    font-size: 1.1rem;
+  }
+
+  &__calendar-container {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: base.bpk-spacing-xxl();
+  }
+
+  &__calendar {
+    margin: 0 auto;
+  }
+
+  &__button {
+    background-color: #0093ff;
+    color: white;
+    border-radius: 30px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    
+    &:hover {
+      background-color: #007acc;
+    }
+  }
+
+  &__footer {
+    padding: base.bpk-spacing-lg();
+    background-color: base.$bpk-color-sky-blue;
+    color: base.$bpk-color-white;
+  }
+
+  &__footer-text {
+    font-size: 0.9rem;
+  }
+}
