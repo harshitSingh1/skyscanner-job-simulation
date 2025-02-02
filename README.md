@@ -27,8 +27,8 @@ package.json
 ## 🛠 Installation & Setup
 
 ```
-git clone <repository_url>
-cd repo_name
+git clone https://github.com/harshitSingh1/skyscanner-job-simulation.git
+cd skyscanner-job-simulation
 npm install
 npm start
 ```
